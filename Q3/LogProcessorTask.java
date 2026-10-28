@@ -1,6 +1,7 @@
 // Task that implements the Runnable interface
 public class LogProcessorTask implements Runnable {
     @Override
+    // Process five log metrics with a short delay between iterations
     public void run() {
         for (int i = 1; i <= 5; i++) {
             System.out.println("[LogProcessor] Log metric iteration " + i
