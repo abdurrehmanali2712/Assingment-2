@@ -14,7 +14,7 @@ public class CacheLocalityBenchmark {
     }
 
     // Column-major: inner loop jumps to a different row each step
-    static double traverseColumnMajor() {
+    static double traverseColumnMajor() { // Visit adjacent elements in each row
         double sum = 0;
         for (int j = 0; j < N; j++) {
             for (int i = 0; i < N; i++) {
