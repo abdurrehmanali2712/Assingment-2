@@ -11,7 +11,7 @@ public class RequestQueue {
         rear = -1;
         size = 0;
     }
-
+// Add a character to the rear of the queue
     public void enqueue(char c) {
         if (size == data.length) {
             System.out.println("Queue overflow");
