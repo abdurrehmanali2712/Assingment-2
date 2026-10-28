@@ -14,7 +14,7 @@ public class PacketSymmetryAuditor {
         }
 
         // Ignore case so "Level" and "level" are treated the same
-        payload = payload.toLowerCase();
+        payload = payload.toLowerCase(); // Convert input to lowercase before checking symmetry
         int n = payload.length();
 
         TransactionStack stack = new TransactionStack(n);
