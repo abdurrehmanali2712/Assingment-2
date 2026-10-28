@@ -15,7 +15,7 @@ public class ParallelMaxSearch extends SensorSearchEngine {
             }
         }
     }
-
+// Check each value to find the maximum in this segment
     public double getMaxValue() {
         return maxValue;
     }
