@@ -15,6 +15,7 @@ public class ParallelRiskCalculator extends RecursiveTask<Double> {
 
     @Override
     protected Double compute() {
+        
         int length = end - start;
 
         // Small enough: compute directly
@@ -27,7 +28,7 @@ public class ParallelRiskCalculator extends RecursiveTask<Double> {
         }
 
         // Otherwise split into two sub-tasks
-        int mid = start + length / 2;
+        int mid = start + length / 2; // Divide the current array section into two smaller tasks
         ParallelRiskCalculator left = new ParallelRiskCalculator(assets, start, mid);
         ParallelRiskCalculator right = new ParallelRiskCalculator(assets, mid, end);
 
