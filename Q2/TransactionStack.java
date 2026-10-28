@@ -7,7 +7,7 @@ public class TransactionStack {
         data = new char[capacity];
         top = -1;
     }
-
+// Add a character to the top of the stack
     public void push(char c) {
         if (top == data.length - 1) {
             System.out.println("Stack overflow");
