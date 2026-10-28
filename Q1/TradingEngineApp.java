@@ -11,6 +11,7 @@ public class TradingEngineApp {
 
         System.out.println("=== Trading Engine: Dispatching Events ===");
         // Run-time polymorphism: the overridden dispatch() of the real object runs
+        // Each event runs its own dispatch method
         for (TradeEvent e : events) {
             e.dispatch();
             System.out.println();
