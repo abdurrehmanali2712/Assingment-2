@@ -15,7 +15,7 @@ public class ParallelMinSearch extends SensorSearchEngine {
             }
         }
     }
-
+// Check each value to find the minimum in this segment
     public double getMinValue() {
         return minValue;
     }
