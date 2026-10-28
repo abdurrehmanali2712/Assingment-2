@@ -61,7 +61,7 @@ public class InventoryCatalogManager {
         // Measure performance using a synchronized map
         runBenchmark("Collections.synchronizedMap", catalog);
     }
-
+// Visit adjacent elements in each row
     public static void benchmarkConcurrentMap() {
         Map<String, Integer> catalog = new ConcurrentHashMap<>();
         runBenchmark("ConcurrentHashMap", catalog);
