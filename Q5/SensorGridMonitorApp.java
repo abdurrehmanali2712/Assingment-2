@@ -30,7 +30,7 @@ public class SensorGridMonitorApp {
             final ParallelMaxSearch maxTask = maxTasks[t];
 
             // Each worker thread runs the min and max search on its own part
-            workers[t] = new Thread(() -> {
+            workers[t] = new Thread(() -> { // Start the worker to process its assigned sensor data
                 minTask.processGrid();
                 maxTask.processGrid();
             }, "Worker-" + (t + 1));
