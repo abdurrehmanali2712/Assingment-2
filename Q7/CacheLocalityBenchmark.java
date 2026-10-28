@@ -5,6 +5,7 @@ public class CacheLocalityBenchmark {
     // Row-major: inner loop moves along a row (consecutive memory)
     static double traverseRowMajor() {
         double sum = 0;
+        // Initialize the array before running the benchmark
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 sum += matrix[i][j];

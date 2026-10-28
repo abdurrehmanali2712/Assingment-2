@@ -1,4 +1,4 @@
-// Superclass for all trade events
+// Superclass for all trade events // Store the basic information for a trade event
 public class TradeEvent {
     protected String senderId;
     protected long timestamp;
@@ -11,7 +11,7 @@ public class TradeEvent {
         this.basePrice = basePrice;
     }
 
-    // Baseline dispatch: logs generic event details
+    // Baseline dispatch: logs generic event detail
     public void dispatch() {
         System.out.println("[GENERIC EVENT] Sender: " + senderId
                 + " | Timestamp: " + timestamp
