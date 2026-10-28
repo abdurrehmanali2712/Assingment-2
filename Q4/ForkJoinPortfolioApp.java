@@ -19,7 +19,7 @@ public class ForkJoinPortfolioApp {
         System.out.println("Assets: " + size + " | Cores available: " + pool.getParallelism());
 
         // Warm-up run so the JVM compiles the code before timing
-        pool.invoke(new ParallelRiskCalculator(assets, 0, size));
+        pool.invoke(new ParallelRiskCalculator(assets, 0, size)); // Calculate the total risk score using the ForkJoinPool
 
         // ---------- Task 1: total risk score ----------
         long t1 = System.nanoTime();
