@@ -20,6 +20,7 @@ public class AsyncWebEngineApp {
 
         // Wait for both threads to finish
         try {
+            // Wait for both worker threads to finish
             telemetry.join();
             logThread.join();
         } catch (InterruptedException e) {
