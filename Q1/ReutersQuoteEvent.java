@@ -12,7 +12,7 @@ public class ReutersQuoteEvent extends TradeEvent {
 
     @Override
     public void dispatch() {
-        double spread = askPrice - bidPrice;
+        double spread = askPrice - bidPrice; // Calculate the difference between ask and bid prices
         double spreadPercent = (spread / basePrice) * 100;
         System.out.println("[REUTERS QUOTE] Sender: " + senderId
                 + " | Timestamp: " + timestamp);
