@@ -6,6 +6,5 @@ This folder contains the Java programs for Question 4.
 - ForkJoinPortfolioApp.java
 - ParallelRiskCalculator.java
 - PortfolioThresholdTask.java
-
 ## Description
 This question covers parallel processing, the ForkJoin framework, and portfolio risk calculations in Java.
