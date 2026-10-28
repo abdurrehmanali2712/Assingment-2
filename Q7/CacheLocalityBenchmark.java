@@ -1,11 +1,12 @@
 public class CacheLocalityBenchmark {
     static final int N = 2000;
+    // Initialize the array before running the benchmark
     static double[][] matrix = new double[N][N];
 
     // Row-major: inner loop moves along a row (consecutive memory)
     static double traverseRowMajor() {
         double sum = 0;
-        // Initialize the array before running the benchmark
+        // Access the array elements during the benchmark
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 sum += matrix[i][j];
@@ -15,9 +16,9 @@ public class CacheLocalityBenchmark {
     }
 
     // Column-major: inner loop jumps to a different row each step
-    static double traverseColumnMajor() { // Visit adjacent elements in each row
+    static double traverseColumnMajor() { 
         double sum = 0;
-        for (int j = 0; j < N; j++) {
+        for (int j = 0; j < N; j++) {// Visit adjacent elements in each row
             for (int i = 0; i < N; i++) {
                 sum += matrix[i][j];
             }
@@ -36,7 +37,7 @@ public class CacheLocalityBenchmark {
         // Warm-up so the JVM compiles both methods before timing
         traverseRowMajor();
         traverseColumnMajor();
-
+// Calculate the time taken by the benchmark
         int runs = 10;
         double totalRow = 0;
         double totalCol = 0;
@@ -64,7 +65,7 @@ public class CacheLocalityBenchmark {
 
         double avgRow = totalRow / runs;
         double avgCol = totalCol / runs;
-
+// Display the final benchmark results
         System.out.println("\nSum check (row = col): " + sumRow + " = " + sumCol);
         System.out.printf("Average Row-Major time    : %.3f ms%n", avgRow);
         System.out.printf("Average Column-Major time : %.3f ms%n", avgCol);
