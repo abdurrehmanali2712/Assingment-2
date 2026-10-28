@@ -21,7 +21,7 @@ public class PortfolioThresholdTask extends RecursiveAction {
 
         if (length <= THRESHOLD) {
             for (int i = start; i < end; i++) {
-                if (assets[i] > riskCap) {
+                if (assets[i] > riskCap) { // Apply the stress adjustment only when the value exceeds the risk cap
                     assets[i] = assets[i] * 1.05; // 5% volatility stress-test penalty
                 }
             }
