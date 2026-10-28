@@ -58,6 +58,7 @@ public class InventoryCatalogManager {
 
     public static void benchmarkSynchronizedMap() {
         Map<String, Integer> catalog = Collections.synchronizedMap(new HashMap<>());
+        // Measure performance using a synchronized map
         runBenchmark("Collections.synchronizedMap", catalog);
     }
 
