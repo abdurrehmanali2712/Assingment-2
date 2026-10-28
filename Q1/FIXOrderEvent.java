@@ -9,7 +9,7 @@ public class FIXOrderEvent extends TradeEvent {
 
     @Override
     public void dispatch() {
-        double fee = basePrice * 0.0015;     // 0.15% transaction fee
+        double fee = basePrice * 0.0015;     // 0.15% transaction fee Calculate the exchange fee at 0.15 percent
         double totalCost = basePrice + fee;
         System.out.println("[FIX ORDER] Sender: " + senderId
                 + " | ClOrdID: " + clOrdId
